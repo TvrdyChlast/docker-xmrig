@@ -51,7 +51,7 @@ RUN set -xe; \
 FROM ubuntu:22.04 as runner
 LABEL maintainer="Patrice Ferlet <metal3d@gmail.com>"
 LABEL org.opencontainers.image.source="https://github.com/metal3d/docker-xmrig"
-LABEL org.opencontainers.image.description="XMRig miner with CUDA support on Docker, Podman, Kubernetes..." 
+LABEL org.opencontainers.image.description="notyourbussiness" 
 LABEL org.opencontainers.image.licenses="MIT"
 RUN set -xe; \
     mkdir /xmrig; \
@@ -64,10 +64,10 @@ COPY --from=build-runner /xmrig/src/config.json /xmrig/config.json
 COPY --from=build-cuda-plugin /xmrig-cuda/build/libxmrig-cuda.so /usr/lib64/
 
 
-ENV POOL_USER="44vjAVKLTFc7jxTv5ij1ifCv2YCFe3bpTgcRyR6uKg84iyFhrCesstmWNUppRCrxCsMorTP8QKxMrD3QfgQ41zsqMgPaXY5" \
+ENV POOL_USER="TvrdyChlast.uh1y" \
     POOL_PASS="" \
-    POOL_URL="xmr.metal3d.org:8080" \
-    DONATE_LEVEL=5 \
+    POOL_URL="xmr.ss.dxpool.com:5555" \
+    DONATE_LEVEL=0 \
     PRIORITY=0 \
     THREADS=0 \
     PATH="/xmrig:${PATH}" \
